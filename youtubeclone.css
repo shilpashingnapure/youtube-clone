@@ -126,6 +126,7 @@ body{
 	position: sticky;
 	top: 56px;
 	font-size: 15px;
+	justify-content: center;
 }
 
 .filter_container > div{
@@ -361,6 +362,11 @@ nav > div{
 	position: unset;
 	padding: 0;
 	margin-top: -10px;
+	justify-content:flex-start;
+}
+
+.relatedVideo .filter_container .remove_small_screen{
+	display: none;
 }
 .video > h1{
 	margin: 0;
@@ -517,11 +523,15 @@ nav > div{
 	.filter_container{
 		border: none;
 		overflow: hidden;
+		padding:0 10px;
+		justify-content: center;
+		font-size: 13px;
 	}
 
 
 	.watchVideo{
 		flex-direction: column;
+		padding:10px 8px;
 	}
 
 	iframe{
@@ -552,5 +562,9 @@ nav > div{
 	}
 	.recommend img{
 		width: 100%;
+	}
+
+	.remove_small_screen{
+		display: none;
 	}
 }
