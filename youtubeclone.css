@@ -546,4 +546,11 @@ nav > div{
 	.search_container > div{
 		flex-direction: column;
 	}
+
+	.recommend > div{
+		flex-direction: column;
+	}
+	.recommend img{
+		width: 100%;
+	}
 }

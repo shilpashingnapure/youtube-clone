@@ -159,7 +159,7 @@
 	
 
 	//SHOW MOST POPULAR VIDEOS
-	var url = `https://www.googleapis.com/youtube/v3/videos/?part=snippet&chart=mostPopular&regionCode=IN&maxResults=32&key=AIzaSyDDR4kk-SyNwlb2S47OS3yOUnfswSRdVsM`
+	var url = `https://www.googleapis.com/youtube/v3/videos/?part=snippet&chart=mostPopular&regionCode=IN&maxResults=32&key=AIzaSyCA2ZgfmTkC6c0RGE4nlheSBhhmwXQm2-4`
 	getData(url , "videos")
 
 
@@ -167,10 +167,10 @@
 	function SearchVideo(search){
 		if(search == 'searchlist'){
 			video_name = document.querySelector("#video_search").value
-			url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${video_name}&type=video&key=AIzaSyDDR4kk-SyNwlb2S47OS3yOUnfswSRdVsM`
+			url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${video_name}&type=video&key=AIzaSyCA2ZgfmTkC6c0RGE4nlheSBhhmwXQm2-4`
 		}
 		else if(search == "wachfromvideo"){
-			url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${watchvideo}&type=video&key=AIzaSyDDR4kk-SyNwlb2S47OS3yOUnfswSRdVsM`
+			url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${watchvideo}&type=video&key=AIzaSyCA2ZgfmTkC6c0RGE4nlheSBhhmwXQm2-4`
 		}
 		document.querySelector(".video_container").classList.add("search_container")
 		getData(url , "search")
@@ -217,7 +217,7 @@
 			
 
 			//GETTING CHANNEL PROFILE IMG AND VIWES VIDEOS
-			var channelicon = `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&key=AIzaSyDDR4kk-SyNwlb2S47OS3yOUnfswSRdVsM&id=${item.snippet.channelId}`
+			var channelicon = `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&key=AIzaSyCA2ZgfmTkC6c0RGE4nlheSBhhmwXQm2-4&id=${item.snippet.channelId}`
 			fetch(channelicon)
 			.then((res)=>{
 				return res.json()
