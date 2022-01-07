@@ -155,12 +155,15 @@
 
 <script>
 	
+	let API_KEY = "AIzaSyCA2ZgfmTkC6c0RGE4nlheSBhhmwXQm2-4"
+	
 	//GETTING CLICKED VIDEO AND RELATED VIDEOS
 	MainVideo = JSON.parse(localStorage.getItem("mainVideo"))
 	recommened = JSON.parse(localStorage.getItem("relatedVideo"))
 	
 	let channelDetail = document.querySelector(".channelDetails")
 
+	
 
 	display(MainVideo , recommened)
 	function display(mainVideo , recommened){
@@ -183,7 +186,7 @@
 
 
 		//GETTING CHANNEL PROFILE IMG AND SUBSCIBER NUMBER
-		var channelicon = `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&key=AIzaSyCA2ZgfmTkC6c0RGE4nlheSBhhmwXQm2-4&id=${mainVideo.snippet.channelId}`
+		var channelicon = `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&key=${API_KEY}&id=${mainVideo.snippet.channelId}`
 		fetch(channelicon)
 		.then((res)=>{
 			return res.json()
@@ -241,7 +244,7 @@
 				divTitle.append(title , channelName , views)
 
 				//GETTING CHANNEL PROFILE IMG
-				var channelicon = `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&key=AIzaSyCA2ZgfmTkC6c0RGE4nlheSBhhmwXQm2-4&id=${item.snippet.channelId}`
+				var channelicon = `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&key=${API_KEY}&id=${item.snippet.channelId}`
 				fetch(channelicon)
 				.then((res)=>{
 					return res.json()
