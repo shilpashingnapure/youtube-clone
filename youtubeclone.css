@@ -516,8 +516,8 @@ nav > div{
 		width: 320px;
 	}
 
-	.video_container img{
-		width: auto;
+	.video_container .thmblinails{
+		width: 100%;
 	}
 
 	.filter_container{
