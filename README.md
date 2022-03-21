@@ -13,4 +13,4 @@ This is clone of Youtube . where user can see videos.
 ### Functonality Applied
 * search videos's
 
-[Try Live](https://shilpashingnapure.github.io/Github-clone/)
+[Try Live](https://shilpashingnapure.github.io/youtube-clone/)
